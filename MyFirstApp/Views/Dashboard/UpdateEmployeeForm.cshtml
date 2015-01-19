@@ -1,0 +1,94 @@
+﻿@model Core.Models.EmployeeModel
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="~/Scripts/jquery.ui.widget.js"></script>
+<script src="~/Scripts/jquery.iframe-transport.js"></script>
+<script src="~/Scripts/jquery.fileupload.js"></script>
+<h2>Update Employee Information</h2>
+
+
+
+@using (Html.BeginForm("UpdateEmployeeDetails", "Dashboard", FormMethod.Post))
+{
+    
+    <fieldset>
+        <legend>Please Update the Entries</legend>
+    <img src="D:\\SHREYAS KANSAL\\ProjectsDemo\\MyFirstApp\\ProfilePicture\\new.jpg" />
+        
+        <ul>
+            @Html.HiddenFor(m => m.ID)
+            <li>
+                @Html.LabelFor(m => m.Name)
+                @Html.DisplayFor(m => m.Name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username)
+                @Html.ValidationMessageFor(m => m.Username)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.DOB)
+                @Html.TextBoxFor(m => m.DOB)
+                @Html.ValidationMessageFor(m => m.DOB)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Year)
+                2015
+                @Html.ValidationMessageFor(m => m.Year)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Address)
+                @Html.TextBoxFor(m => m.Address)
+                @Html.ValidationMessageFor(m => m.Address)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Salary)
+                @Html.TextBoxFor(m => m.Salary)
+                @Html.ValidationMessageFor(m => m.Salary)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Department)
+                @Html.DropDownList("Department", (SelectList)ViewBag.dept)
+                @Html.ValidationMessageFor(m => m.Department)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+            <li>
+                @Html.HiddenFor(m => m.ProfileName, new {@id="Profile"})
+            </li>
+        </ul>
+
+        
+        <div id="progress">
+            <div class="bar" style="width: 0%;"></div>
+        </div>
+        
+        <input type="submit" value="Update" />
+        
+    </fieldset>
+    
+        
+}
+
+<button id="btnprofile" onclick="$('#fileupload').click()">Upload Profile Picture</button>
+<input style="visibility:hidden" id="fileupload" type="file" name="files[]" multiple/>
+
+<script>
+    
+        $('#fileupload').fileupload({
+            url: "/Dashboard/ProfileUpload",
+            type: "POST",
+            dataType: 'json',
+            done: function (e, data) {
+                alert(data.result);
+                $.each(data.result.files, function (index, file) {
+                    $('<p/>').text(file.name).appendTo(document.body);
+                    data.result
+                    $("#Profile").val(data.result);
+                });
+            }
+        });
+   
+</script>

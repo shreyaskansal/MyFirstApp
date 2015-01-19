@@ -1,0 +1,70 @@
+﻿@model Core.Models.ResultList<Core.Models.EmployeeModel>
+
+<fieldset>
+    <legend>LIST OF EMPLOYEES</legend>
+    <table style="width: 100%" id="EmployeeTable">
+        <tr>
+            <td>
+                @Html.Label("employee.ID")
+            </td>
+            <td>
+                @Html.Label("employee.Name")
+            </td>
+
+        </tr>
+        
+        @foreach (Core.Models.EmployeeModel employee in Model.list)
+        {    
+            <tr id="@employee.ID">
+                <td>
+                    @employee.ID
+                </td>
+                <td>
+                    @employee.Name
+                </td>
+
+                <td>
+                    @Html.Hidden("employeeId", employee.ID)
+                    <button class="btndetails" employeeid="@employee.ID" @*onclick="GetEmployeeDetail(this)"*@>Details Of Employee</button>
+                    <button class="btnremoveemployee" employeeid="@employee.ID" @*onclick="DeleteEmployee(this)"*@>Remove Employee</button>
+                   <!-- Html.ActionLink("Update Details", "UpdateEmployeeDetails", new { employee.ID });-->
+                    <button class="btnupdateemployee" onclick="location.href='@Url.Action("../Dashboard/UpdateEmployeeForm/" + @employee.ID)'">Update</button>
+                </td>
+              </tr>}
+    </table>
+
+</fieldset>
+
+<script type="text/javascript">
+    $(".btndetails").on("click", function () { GetEmployeeDetail(this); })
+    $(".btnremoveemployee").on("click", function () { DeleteEmployee(this); })
+</script>
+
+<script type="text/javascript">
+    function GetEmployeeDetail(sender) {
+        $(sender).parentsUntil("table", "tr").css({ "color": 'blue' });
+        var hdnEmployeeId = $(sender).attr("employeeid");
+        //var x = hdnEmployeeId.val();
+        $.ajax({
+            url: '/Dashboard/EmployeeDetails',
+            type: "POST",
+            data: { "EmployeeId": hdnEmployeeId },
+            success: function(response) {
+                $("#DisplayEmployeeDetails").html(response);
+            }
+        });
+    }
+    function DeleteEmployee(sender) {
+        var x = $(sender).attr("employeeid");
+        
+        $.ajax({
+            url: '/Dashboard/DeleteEmployee/{EmployeeId}',
+            type: "POST",
+            data: { "EmployeeId": x },
+            success: function (response) {
+                $(sender).parentsUntil("table", "tr").remove();
+            }
+        });
+    }
+</script>
+

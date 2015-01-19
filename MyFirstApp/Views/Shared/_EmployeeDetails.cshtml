@@ -1,0 +1,47 @@
+﻿@model Core.Models.EmployeeModel
+<fieldset>
+    <legend>DETAILS OF ALL THE EMPLOYEES</legend>
+    <table style="width: 100%">
+        <tr>
+            <td>
+                @Html.Label("employee.ID")
+            </td>
+            <td>
+                @Html.Label("employee.Name")
+            </td>
+            <td>
+                @Html.Label("employee.DOB")
+            </td>
+            <td>
+                @Html.Label("employee.Username")
+            </td>
+            <td>
+                @Html.Label("employee.Address")
+            </td>
+            <td>
+                @Html.Label("employee.Department")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayTextFor(m => m.ID)
+
+            </td>
+            <td>
+                @Html.DisplayTextFor(m => m.Name)
+            </td>
+            <td>
+                @Html.DisplayTextFor(m => m.DOB)
+            </td>
+            <td>
+                @Html.DisplayTextFor(m => m.Username)
+            </td>
+            <td>
+                @Html.DisplayTextFor(m => m.Address)
+            </td>
+            <td>
+                @Html.DisplayTextFor(m => m.Department)
+            </td>
+        </tr>
+    </table>
+</fieldset>

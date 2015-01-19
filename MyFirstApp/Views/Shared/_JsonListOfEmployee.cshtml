@@ -1,0 +1,113 @@
+﻿@model Core.Models.ResultList<Core.Models.EmployeeModel>
+
+<link type="text/css" rel="stylesheet" href="~/Content/simplePagination.css"/>
+
+<fieldset>
+    <legend>Json List Of Employees</legend>
+        <div>
+            Search:
+            <input id="tbSearchByEmployeeName" type="text" />
+            <button type="button" id="btn" onclick="SearchByEmployeeName();">Search</button>
+        </div>
+        <table>
+        <tr>
+            <td>
+                @Html.Label(" ID ")
+            </td>
+            <td>
+                @Html.Label(" Name ")
+            </td>
+
+        </tr>
+        </table>
+        <table id="DisplayListOfEmployee">
+         
+     
+        </table>
+</fieldset>
+
+
+<script src="~/Scripts/jquery.tmpl.js"></script>
+<script src="~/Scripts/jquery.simplePagination.js"></script>
+<script src="~/Scripts/jquery.blockUI.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        AJAX('1');
+    });
+
+    function SearchByEmployeeName() {
+        $("#Pagenumber").pagination('selectPage', 1);
+        AJAX(1);
+    }
+
+    function AJAX(pagenumber) {
+        $(document).ajaxStart($.blockUI({ message: '<h1><img src="busy.gif" /> Loading...</h1>' }));
+        $.ajax({
+            type: "POST",
+            url: "/Dashboard/JsonEmployeeList",
+            datatype: "json",
+            data: { "Offset": (pagenumber - 1) * $("#NumberOfRows").val(), "PageSize": $("#NumberOfRows").val(), "SearchEmployeeName": $("#SearchByEmployeeName").val() },
+            success: function (response)
+            {
+                $(document).ajaxStop($.unblockUI)
+                $("#DisplayListOfEmployee").html($("#HtmlForEmployeeList").tmpl(response.list));
+                
+                
+                if (($("#Pagenumber").children().length) == 0) {
+                    $("#Pagenumber").pagination({
+
+                        items: response.TotalCount,
+                        itemsOnPage: $("#NumberOfRows").val(),
+                        cssStyle: 'light-theme',
+                        onPageClick: function (pagenumber, event) {
+                            AJAX(pagenumber);
+                        }
+                    });
+                }
+                else {
+                    $("#Pagenumber").pagination("updateItems", response.TotalCount);
+                }
+            }
+
+        });
+
+    }
+       
+    function OnChange() {
+        $("#Pagenumber").pagination("updateItemsOnPage", $("#NumberOfRows").val());
+        AJAX(1);
+    }
+
+</script>
+
+
+<script id="HtmlForEmployeeList" type="text/x-jquery-tmpl">
+    <tr>
+        <td>${ID}</td>
+        <td>${Name}</td>
+        <td><button type="button" onclick="GetEmployeeDetail(this)" employeeid="${ID}" class="details">Details Of Employee</button></td>
+        <td><button type="button" onclick="DeleteEmployee(this)" employeeid="${ID}" class="remove">Remove Employee</button></td>
+        <td><button href="../Dashboard/UpdateEmployeeForm/${ID}">Update</button></td>
+    </tr>
+</script>
+
+<script type="text/javascript">
+    $("#DisplayListOfEmployee").on("click", ".details", function () { GetEmployeeDetail(this); })
+    $("#DisplayListOfEmployee").on("click", ".remove", function () { DeleteEmployee(this); })
+</script>
+
+<fieldset>
+<label>Pages</label>
+    <select id = "NumberOfRows" onchange = "OnChange()">
+               <option value = "2">2</option>
+               <option value = "3">3</option>
+        </select>
+        
+</fieldset>
+
+<div id="Pagenumber"></div>
+
+
+

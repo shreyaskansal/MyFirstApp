@@ -1,0 +1,39 @@
+﻿@model Core.Models.AddEmployeeModel
+
+<h2>EMPLOYEE REGISTRATION FORM</h2>
+@using (Html.BeginForm("AddEmployee", "Dashboard", FormMethod.Post)){
+<fieldset>
+        <legend>Add An Employee</legend>
+        <ul>
+            @Html.ValidationSummary(true)
+            <li>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.DOB )
+                @Html.TextBoxFor(m => m.DOB)
+                @Html.ValidationMessageFor(m => m.DOB)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Username )
+                @Html.TextBoxFor(m => m.Username)
+                @Html.ValidationMessageFor(m => m.Username)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Address )
+                @Html.TextBoxFor(m => m.Address)
+                @Html.ValidationMessageFor(m => m.Address)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Department)
+                @Html.DropDownList("Department", (SelectList)ViewBag.dept)
+                @Html.ValidationMessageFor(m => m.Department)
+                
+            </li>
+        </ul>
+        <input type="submit" value="Add An Employee" />
+
+</fieldset>
+}

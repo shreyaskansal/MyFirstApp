@@ -1,0 +1,46 @@
+﻿@model Core.Models.ResultList<Core.Models.EmployeeModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dashboard</h2>
+
+
+@using (Html.BeginForm("AddEmployeeForm", "Dashboard", FormMethod.Post)){
+ <fieldset>
+    <legend>You are Successfully Logged In</legend>
+    <input type="submit" value="Add An Employee" />
+ </fieldset>
+}
+
+
+
+@Html.Partial("_EmployeeModel", Model)
+
+
+
+
+
+
+
+
+
+
+
+@Html.Partial("_JsonListOfEmployee", Model)
+
+
+
+
+
+
+<button class="btnDoToDepartment" onclick="location.href='@Url.Action("../Dashboard/Department/")'">Go to Departments</button>
+
+@using (Html.BeginForm("LogOut", "Account", FormMethod.Post)){
+ <fieldset>
+    <legend>    </legend>
+      <input type="submit" value="Log Out" />
+ </fieldset>
+}
+
+<div id ="DisplayEmployeeDetails"></div>
