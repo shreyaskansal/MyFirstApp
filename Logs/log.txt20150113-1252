@@ -1,0 +1,11 @@
+2015-01-13 12:52:31,661 [60] ERROR Persistance.EmployeeRepository [(null)] - Error:System.IndexOutOfRangeException: Name
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Persistance.EmployeeRepository.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 237
+2015-01-13 12:52:31,686 [60] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Persistance.EmployeeRepository.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 245
+   at Services.EmployeeService.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 98
+2015-01-13 12:52:31,691 [60] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Services.EmployeeService.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 103
+   at MyFirstApp.Controllers.DashboardController.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 91

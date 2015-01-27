@@ -1,0 +1,12 @@
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Services.dll.config
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Services.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Services.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Core.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\log4net.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Persistance.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Core.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\Persistance.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\bin\Debug\log4net.xml
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\obj\Debug\Services.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\obj\Debug\Services.pdb

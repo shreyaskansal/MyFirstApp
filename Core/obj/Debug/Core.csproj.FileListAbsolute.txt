@@ -1,0 +1,7 @@
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\bin\Debug\Core.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\bin\Debug\Core.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\bin\Debug\log4net.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\bin\Debug\log4net.xml
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\obj\Debug\Core.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\obj\Debug\Core.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache

@@ -1,0 +1,9 @@
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\bin\Debug\Persistance.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\bin\Debug\Persistance.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\bin\Debug\Core.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\bin\Debug\log4net.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\bin\Debug\Core.pdb
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\bin\Debug\log4net.xml
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\obj\Debug\Persistance.csprojResolveAssemblyReference.cache
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\obj\Debug\Persistance.dll
+D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\obj\Debug\Persistance.pdb

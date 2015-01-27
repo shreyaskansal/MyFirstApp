@@ -1,0 +1,7 @@
+2015-01-12 15:17:48,710 [10] ERROR Persistance.EmployeeRepository [(null)] - Error:Procedure or function 'stp_AddEmployee' expects parameter '@Name', which was not supplied.
+2015-01-12 15:17:48,775 [10] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Persistance.EmployeeRepository.AddEmployeemodel(AddEmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 190
+   at Services.EmployeeService.Addemployee(AddEmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 96
+2015-01-12 15:17:48,801 [10] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Services.EmployeeService.Addemployee(AddEmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 101
+   at MyFirstApp.Controllers.DashboardController.AddEmployee(AddEmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 114

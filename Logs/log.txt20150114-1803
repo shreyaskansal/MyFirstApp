@@ -1,0 +1,2 @@
+2015-01-14 18:03:32,157 [8] ERROR Persistance.EmployeeRepository [(null)] - Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Persistance.EmployeeRepository.DepartmentDetails(Int32 DepartmentId) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 286

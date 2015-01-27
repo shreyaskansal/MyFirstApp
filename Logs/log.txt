@@ -1,0 +1,7 @@
+2015-01-16 18:09:23,834 [24] ERROR Persistance.EmployeeRepository [(null)] - EmployeeRepository/UpdateEmployeeDetails:Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PROFILENAME', which was not supplied.
+2015-01-16 18:09:23,882 [24] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PROFILENAME', which was not supplied.
+   at Persistance.EmployeeRepository.UpdateEmployeeDetails(EmployeeModel model, String filename) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 430
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model, String filename) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 211
+2015-01-16 18:09:23,883 [24] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PROFILENAME', which was not supplied.
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model, String filename) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 216
+   at MyFirstApp.Controllers.DashboardController.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 238

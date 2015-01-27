@@ -1,0 +1,8 @@
+2015-01-15 10:52:37,109 [7] ERROR Persistance.EmployeeRepository [(null)] - Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Persistance.EmployeeRepository.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 260
+2015-01-15 10:52:37,139 [7] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: Object reference not set to an instance of an object.
+   at Persistance.EmployeeRepository.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 269
+   at Services.EmployeeService.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 120
+2015-01-15 10:52:37,141 [7] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: Object reference not set to an instance of an object.
+   at Services.EmployeeService.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 125
+   at MyFirstApp.Controllers.DashboardController.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 112

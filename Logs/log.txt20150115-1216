@@ -1,0 +1,14 @@
+2015-01-15 12:16:36,519 [7] ERROR Persistance.EmployeeRepository [(null)] - EmployeeRepository/UpdateEmployeeDetails:Procedure or function 'stp_EditEmployeeDetails' expects parameter '@USERNAME', which was not supplied.
+2015-01-15 12:16:36,519 [7] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Persistance.EmployeeRepository.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 429
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 211
+2015-01-15 12:16:36,519 [7] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 216
+   at MyFirstApp.Controllers.DashboardController.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 219
+2015-01-15 12:16:45,811 [16] ERROR Persistance.EmployeeRepository [(null)] - EmployeeRepository/UpdateEmployeeDetails:Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PASSWORD', which was not supplied.
+2015-01-15 12:16:45,811 [16] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Persistance.EmployeeRepository.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 429
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 211
+2015-01-15 12:16:45,811 [16] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 216
+   at MyFirstApp.Controllers.DashboardController.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 219

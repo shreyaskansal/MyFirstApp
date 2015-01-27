@@ -1,0 +1,11 @@
+2015-01-14 11:14:41,165 [7] ERROR Persistance.EmployeeRepository [(null)] - Error:System.IndexOutOfRangeException: TotalCount
+   at System.Data.ProviderBase.FieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Persistance.EmployeeRepository.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 248
+2015-01-14 11:14:41,225 [7] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: TotalCount
+   at Persistance.EmployeeRepository.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 257
+   at Services.EmployeeService.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 98
+2015-01-14 11:14:41,254 [7] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: TotalCount
+   at Services.EmployeeService.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 103
+   at MyFirstApp.Controllers.DashboardController.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 91

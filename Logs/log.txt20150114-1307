@@ -1,0 +1,42 @@
+2015-01-14 13:06:11,087 [8] ERROR Persistance.EmployeeRepository [(null)] - Error:System.Data.SqlClient.SqlException (0x80131904): Procedure stp_DepartmentList has no parameters and arguments were supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at Persistance.EmployeeRepository.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 229
+ClientConnectionId:5df9a579-a014-45b2-832a-76b9ce7c6169
+2015-01-14 13:06:11,127 [8] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Persistance.EmployeeRepository.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 256
+   at Services.EmployeeService.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 120
+2015-01-14 13:06:11,150 [8] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Services.EmployeeService.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 125
+   at MyFirstApp.Controllers.DashboardController.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 112
+2015-01-14 13:07:28,008 [10] ERROR Persistance.EmployeeRepository [(null)] - Error:System.Data.SqlClient.SqlException (0x80131904): Procedure stp_DepartmentList has no parameters and arguments were supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at Persistance.EmployeeRepository.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 229
+ClientConnectionId:717bbd65-9e60-4b3a-b4b5-036e0d81cc65
+2015-01-14 13:07:28,059 [10] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: Procedure stp_DepartmentList has no parameters and arguments were supplied.
+   at Persistance.EmployeeRepository.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 256
+   at Services.EmployeeService.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 120
+2015-01-14 13:07:28,080 [10] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: Procedure stp_DepartmentList has no parameters and arguments were supplied.
+   at Services.EmployeeService.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 125
+   at MyFirstApp.Controllers.DashboardController.JsonDepartment(Int32 Offset, Int32 PageSize, String SearchDepartmentName) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 112

@@ -1,0 +1,15 @@
+2015-01-16 13:31:03,650 [9] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Profile Picture\unnamed.jpg'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at System.Web.HttpPostedFileWrapper.SaveAs(String filename)
+   at MyFirstApp.Controllers.DashboardController.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 226
+2015-01-16 14:42:39,453 [14] ERROR Persistance.EmployeeRepository [(null)] - EmployeeRepository/UpdateEmployeeDetails:Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PASSWORD', which was not supplied.
+2015-01-16 14:42:39,491 [14] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PASSWORD', which was not supplied.
+   at Persistance.EmployeeRepository.UpdateEmployeeDetails(EmployeeModel model, String filename) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 430
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model, String filename) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 211
+2015-01-16 14:42:39,497 [14] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: Procedure or function 'stp_EditEmployeeDetails' expects parameter '@PASSWORD', which was not supplied.
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model, String filename) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 216
+   at MyFirstApp.Controllers.DashboardController.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 238

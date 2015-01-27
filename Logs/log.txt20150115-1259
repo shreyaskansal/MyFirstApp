@@ -1,0 +1,7 @@
+2015-01-15 12:59:46,842 [51] ERROR Persistance.EmployeeRepository [(null)] - EmployeeRepository/UpdateEmployeeDetails:Procedure or function 'stp_EditEmployeeDetails' expects parameter '@USERNAME', which was not supplied.
+2015-01-15 12:59:46,856 [51] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Persistance.EmployeeRepository.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 429
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 211
+2015-01-15 12:59:46,856 [51] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: An Error Occured
+   at Services.EmployeeService.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 216
+   at MyFirstApp.Controllers.DashboardController.UpdateEmployeeDetails(EmployeeModel model) in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 219

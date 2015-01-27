@@ -1,0 +1,8 @@
+2015-01-14 11:05:45,079 [7] ERROR Persistance.EmployeeRepository [(null)] - Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Persistance.EmployeeRepository.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 240
+2015-01-14 11:05:45,123 [7] ERROR Services.EmployeeService [(null)] - Error in Index functionSystem.Exception: Object reference not set to an instance of an object.
+   at Persistance.EmployeeRepository.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Persistance\EmployeeRepository.cs:line 256
+   at Services.EmployeeService.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 98
+2015-01-14 11:05:45,144 [7] ERROR MyFirstApp.Controllers.DashboardController [(null)] - Error in Index functionSystem.Exception: Object reference not set to an instance of an object.
+   at Services.EmployeeService.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\Services\EmployeeService.cs:line 103
+   at MyFirstApp.Controllers.DashboardController.Department() in d:\SHREYAS KANSAL\ProjectsDemo\MyFirstApp\MyFirstApp\Controllers\DashboardController.cs:line 91
